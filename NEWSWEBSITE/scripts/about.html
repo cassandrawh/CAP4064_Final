@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../images/newslogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Jersey+15&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="../images/newsheader.png" alt="Header Photo" class="header-img">
+        <div class="header-text">
+            <p>Welcome to Real News Now, your trusted source for up-to-the-minute coverage of global events, breaking news, and insightful analysis. As your premier destination for staying informed, we strive to deliver accurate and unbiased reporting on the topics that matter most to you. Dive into our diverse range of articles, from politics and finance to culture and technology, and join us in exploring the stories shaping our world today.</p>
+        </div>
+        <div id="nav-sidebar" class="nav-sidebar">
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="livefeeds.html">Live</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+        <button id="nav-toggle" class="nav-toggle">&#9776;</button>
+    </header>
+<main>
+    <h1>About Us!</h1>
+    <p>As an avid follower of global events and a strong believer in the importance of staying informed, I decided to create this news page to curate a collection of diverse and timely world news, providing a platform for myself and others to stay up-to-date with significant developments from around the globe.</p>
+    <h2>Share Your News Suggestion</h2>
+    <form id="newsForm" onsubmit="return submitForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="responseMessage" style="display: none;">
+        Thank you! Your suggestion is under review by our team. We will get back to you through email!
+    </div>
+
+    <script>
+        function submitForm() {
+            event.preventDefault();
+            
+            document.getElementById("responseMessage").style.display = "block";
+            
+            document.getElementById("newsForm").reset();
+
+            return false;
+        }
+    </script>
+
+</main>
+    <footer>
+        <p>&copy; 2024 News Today</p>
+    </footer>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navSidebar = document.querySelector('.nav-sidebar');
+
+    navToggle.addEventListener('click', () => {
+        navSidebar.classList.toggle('active');
+    });
+});
+
+    </script>
+
+</body>
+</html>

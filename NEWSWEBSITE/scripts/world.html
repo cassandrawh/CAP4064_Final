@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World News</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../images/newslogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Jersey+15&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="../images/newsheader.png" alt="Header Photo" class="header-img">
+        <div class="header-text">
+            <p>Welcome to Real News Now, your trusted source for up-to-the-minute coverage of global events, breaking news, and insightful analysis. As your premier destination for staying informed, we strive to deliver accurate and unbiased reporting on the topics that matter most to you. Dive into our diverse range of articles, from politics and finance to culture and technology, and join us in exploring the stories shaping our world today.</p>
+        </div>
+        <div id="nav-sidebar" class="nav-sidebar">
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="livefeeds.html">Live</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+        <button id="nav-toggle" class="nav-toggle">&#9776;</button>
+    </header>
+    <main>
+        <h1>World News</h1>
+        <div class="grid-container">
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/yemen.png" alt="Photo 1">
+            <div class="caption">UN Reports Surge in Civilians Killed in Yemen Conflict: The United Nations has expressed grave concern over the escalating violence in Yemen, where a recent surge in civilian casualties has been reported amidst ongoing conflict between warring factions.</div>
+        </div>
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/eurounion.png" alt="Photo 2">
+            <div class="caption">European Union Announces New Climate Targets for Member State: In a landmark decision, the European Union has unveiled ambitious new climate targets aimed at reducing carbon emissions and combating climate change, signaling a significant step forward in global environmental efforts.</div>
+        </div>
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/ukvra.png" alt="Photo 1">
+            <div class="caption">Russia and Ukraine Hold Talks Amid Escalating Tensions: Tensions remain high as Russia and Ukraine engage in diplomatic talks to address mounting concerns over security and territorial disputes in the region, with both sides seeking to defuse the situation and avoid further escalation.</div>
+        </div>
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/africacovid.png" alt="Photo 2">
+            <div class="caption">COVID-19 Vaccination Efforts Expand in Africa as Cases Rise: With COVID-19 cases on the rise across the African continent, efforts to ramp up vaccination campaigns have intensified, as health authorities work to curb the spread of the virus and protect vulnerable populations.</div>
+        </div>
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/china.png" alt="Photo 1">
+            <div class="caption">China Launches Mission to Explore Mars: China has launched a groundbreaking mission to explore Mars, marking a significant milestone in the country's ambitious space program as it seeks to expand its presence in the realm of space exploration and scientific discovery.</div>
+        </div>
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/amazon.png" alt="Photo 2">
+            <div class="caption">Brazilian Amazon Rainforest Faces Record Deforestation Rates: The Brazilian Amazon rainforest is experiencing alarming rates of deforestation, with environmentalists sounding the alarm over the destruction of vital ecosystems and biodiversity loss, amid growing concerns about the impact on global climate patterns.</div>
+        </div>
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/japan.png" alt="Photo 1">
+            <div class="caption">Japan Approves Plan to Release Fukushima Wastewater into Ocean: Japan has approved a controversial plan to release treated wastewater from the Fukushima nuclear plant into the ocean, sparking outrage among local communities and environmental groups, who fear potential environmental and health risks.</div>
+        </div>
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/myanmar.png" alt="Photo 2">
+            <div class="caption">Violence Erupts in Myanmar as Military Clashes with Protesters: Myanmar continues to grapple with political unrest and violence, as clashes between anti-coup protesters and security forces escalate, raising international concerns about human rights abuses and the country's democratic future.</div>
+        </div>
+        <div class="grid-item" style="grid-column: span 3;">
+            <img src="../images/un.png" alt="Photo 1">
+            <div class="caption">United Nations Condemns Human Rights Violations in North Korea: The United Nations has condemned ongoing human rights violations in North Korea, including arbitrary detentions, torture, and forced labor, calling for accountability and justice for victims of systemic abuses.</div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const gridItems = document.querySelectorAll('.grid-item');
+
+                function fadeElements() {
+                    gridItems.forEach(item => {
+                if (isElementInViewport(item)) {
+                    item.classList.add('fade-in');
+                } 
+                else {
+                    item.classList.remove('fade-in');
+                }
+                });
+            }
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    window.addEventListener('scroll', fadeElements);
+    window.addEventListener('resize', fadeElements);
+    fadeElements(); // Initial call to fade elements based on initial viewport
+});
+
+
+        </script>
+
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 News Today</p>
+    </footer>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navSidebar = document.querySelector('.nav-sidebar');
+
+    navToggle.addEventListener('click', () => {
+        navSidebar.classList.toggle('active');
+    });
+});
+
+    </script>
+</body>
+</html>

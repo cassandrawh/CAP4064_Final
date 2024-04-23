@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Feeds</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../images/newslogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Jersey+15&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="../images/newsheader.png" alt="Header Photo" class="header-img">
+        <div class="header-text">
+            <p>Welcome to Real News Now, your trusted source for up-to-the-minute coverage of global events, breaking news, and insightful analysis. As your premier destination for staying informed, we strive to deliver accurate and unbiased reporting on the topics that matter most to you. Dive into our diverse range of articles, from politics and finance to culture and technology, and join us in exploring the stories shaping our world today.</p>
+        </div>
+        <div id="nav-sidebar" class="nav-sidebar">
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="world.html">World</a></li>
+                <li><a href="livefeeds.html">Live</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+        <button id="nav-toggle" class="nav-toggle">&#9776;</button>
+    </header>
+
+    <main>
+        <h1>Live Feeds:</h1>
+        <p>On this page, you'll find a dynamic blend of live updates and localized news feeds, offering a comprehensive view of both global events and community happenings. The live feed section delivers real-time updates from various reliable sources, ensuring you're always in the know about breaking news and unfolding events from around the world. Meanwhile, the local feeds provide a closer look at what's happening in your community, featuring news stories, events, and announcements relevant to your area. Whether you're interested in global affairs or seeking information about what's happening closer to home, our live and local feeds offer a curated selection of news to keep you informed and engaged. With this combination of live updates and local news coverage, you'll have access to a diverse range of information to stay connected to both the wider world and your local community</p>
+        <h2>US News</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gN0PZCe-kwQ" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vZYMwAm8sso" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/34CGav-Gf5w" frameborder="0" allowfullscreen></iframe>
+        <h2>Global News</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tkDUSYHoKxE" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dJzUioqf_W0" frameborder="0" allowfullscreen></iframe>
+    </main>
+    <footer>
+        <p>&copy; 2024 News Today</p>
+    </footer>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+        document.getElementById('nav-sidebar').classList.toggle('active');
+});</script>
+
+</body>
+</html>
+
